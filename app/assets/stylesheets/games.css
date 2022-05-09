@@ -28,3 +28,11 @@ h1 {
 form {
   text-align: center;
 }
+
+.result {
+  text-align: center;
+}
+
+p {
+  font-style: italic;
+}

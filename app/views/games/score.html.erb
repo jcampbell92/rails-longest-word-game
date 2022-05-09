@@ -5,8 +5,8 @@
   <% end %>
 </ul>
 <br>
-<div>
+<div class='result'>
   <h2><%= "You scored: #{@result[:score]}"%></h2>
   <h3><%= @result[:message] %></h3>
-  <p>Time: <%= @result[:time]%></p>
+  <p>Time: <%= @result[:time].to_i%></p>
 </div>
