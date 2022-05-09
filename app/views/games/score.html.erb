@@ -1,0 +1,12 @@
+<h1>New game</h1>
+<ul>
+  <% @letters.each do |letter|%>
+  <li><%= letter.upcase %></li>
+  <% end %>
+</ul>
+<br>
+<div>
+  <h2><%= "You scored: #{@result[:score]}"%></h2>
+  <h3><%= @result[:message] %></h3>
+  <p>Time: <%= @result[:time]%></p>
+</div>

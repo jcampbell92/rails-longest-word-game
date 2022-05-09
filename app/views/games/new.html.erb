@@ -1,0 +1,18 @@
+<%starting = Time.now%>
+<h1>New game</h1>
+<ul>
+  <% @letters.each do |letter|%>
+  <li><%= letter.upcase %></li>
+  <% end %>
+</ul>
+
+<%# <p><%=@letters%>
+
+<form action="/score" method="post">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %> <%= hidden_field_tag :letters, @letters %>
+  <%= hidden_field_tag :starting, starting%>
+  <input type="text" name="query">
+  <input type="submit" value="Submit word">
+  <%# <% elapsed = (ending - starting) %> %>
+  <%# <%= hidden_field_tag :elapsed, (ending - starting)%> %>
+</form>
